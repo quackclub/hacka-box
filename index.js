@@ -11,7 +11,7 @@ const {
 
 const wakatime = new WakaTimeClient(wakatimeApiKey, wakatimeApiUrl);
 
-const octokit = new Octokit({ auth: `token ${githubToken}` });
+const octokit = new Octokit({ auth: githubToken });
 
 async function main() {
   const stats = await wakatime.getMyStats({ range: RANGE.LAST_7_DAYS });
