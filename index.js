@@ -9,7 +9,6 @@ const {
   WAKATIME_API_URL: wakatimeApiUrl
 } = process.env;
 
-console.log(wakatimeApiUrl, "custom baseUrl???")
 const wakatime = new WakaTimeClient(wakatimeApiKey, wakatimeApiUrl);
 
 const octokit = new Octokit({ auth: githubToken });
